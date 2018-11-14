@@ -37,17 +37,17 @@ function obj(opts) {
       e.preventDefault()
       e.stopPropagation()
       e.target.classList.remove('drag')
-      const files = [].slice.apply(
-        e.dataTransfer.files
-      )
-      if (opts.on_file_drop) {
-        files.forEach(opts.on_file_drop)
-      }
       if (opts.on_drop) {
         opts.on_drop({
           ctx,
           dataTransfer: e.dataTransfer
         })
+      }
+      if (opts.on_file_drop) {
+        const files = [].slice.apply(
+          e.dataTransfer.files
+        )
+        files.forEach(opts.on_file_drop)
       }
     }
   }
