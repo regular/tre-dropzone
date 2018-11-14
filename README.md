@@ -1,0 +1,4 @@
+tre-dropzone
+---
+
+License: ISC
