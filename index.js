@@ -5,11 +5,10 @@ setStyle(`
   .tre-dropzone {
     width: min-content;
     height: min-content;
-    box-shadow: 0 0 1px 2px red;
     pointer-events: all;
   }
   .tre-dropzone.drag {
-    box-shadow: 0 0 1px 2px gold;
+    box-shadow: 0 0 1px 2px red;
   }
   .tre-dropzone .drag *,
   .tre-dropzone.drag * {
