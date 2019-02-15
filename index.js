@@ -33,6 +33,9 @@ function obj(opts) {
       e.stopPropagation()
     },
     'ev-drop': e => {
+      // TODO HACK: undo what tre-sortable-list did
+      // (we preventDefault, so it has no chance)
+      document.body.classList.remove('dragging')
       e.preventDefault()
       e.stopPropagation()
       e.target.classList.remove('drag')
